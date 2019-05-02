@@ -55,12 +55,6 @@ public class QueryEngine {
             
             List<String[]> questionList= objQueryEngine.questionReader(); 
             
-//            String[] dumbquestion = {"culture", "declaration"};
-//            String finalquery = dumbquestion[0] + " "+ dumbquestion[1];
-//
-//            List<ResultClass> top10ofwikis = 
-//            		objQueryEngine.actualIndexer(finalquery, indexProcessor.index, indexProcessor.analyzer);
-            
             
             float matched = 0;
             float intop10 =0;
@@ -72,12 +66,7 @@ public class QueryEngine {
             	String answer = singlequestion[2];
             	
                 StanfordLemmatizer slem = new StanfordLemmatizer();
-
-                
-            	String category = slem.lemmatize(singlequestion[0].replaceAll("\\(.*?\\)", "")).toString();
-            //	System.out.println(objQueryEngine.questionTokenizer(category));
-            	
-            	
+            	           	
             	
                 String lemmaquestion = slem.lemmatize(question).toString() ;
             	String tokenedquestion = objQueryEngine.questionTokenizer(lemmaquestion);
