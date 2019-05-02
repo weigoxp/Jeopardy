@@ -112,4 +112,75 @@
     </plugin>
   </plugins>
   </build>
+
+
+<profiles>
+  <profile>
+ <!--  Name your profile here  -->
+<id>index</id>
+<build>
+<plugins>
+<plugin>
+<groupId>org.codehaus.mojo</groupId>
+<artifactId>exec-maven-plugin</artifactId>
+<version>1.2.1</version>
+<executions>
+<execution>
+<goals>
+<goal>java</goal>
+</goals>
+</execution>
+</executions>
+<configuration>
+ <!--
+ TODO: if your main class is called something else, change it here 
+-->
+<mainClass>edu.arizona.cs.QueryEngine</mainClass>
+ <!--
+ TODO: if your class takes command line arguments, change them here 
+-->
+<arguments>
+<argument>0</argument>
+</arguments>
+</configuration>
+</plugin>
+</plugins>
+</build>
+</profile>
+<profile>
+ <!--  Name your profile here  -->
+<id>search</id>
+<build>
+<plugins>
+<plugin>
+<groupId>org.codehaus.mojo</groupId>
+<artifactId>exec-maven-plugin</artifactId>
+<version>1.2.1</version>
+<executions>
+<execution>
+<goals>
+<goal>java</goal>
+</goals>
+</execution>
+</executions>
+<configuration>
+ <!--
+ TODO: if your main class is called something else, change it here 
+-->
+<mainClass>edu.arizona.cs.QueryEngine</mainClass>
+ <!--
+ TODO: if your class takes command line arguments, change them here 
+-->
+<arguments>
+<argument>1</argument>
+</arguments>
+</configuration>
+</plugin>
+</plugins>
+</build>
+</profile>
+</profiles>
+
+
+
   </project>

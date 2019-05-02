@@ -38,7 +38,8 @@ public class QueryEngine {
     String indexDir = "./index";
  /* *********************************************************************************************************************/
     public static void main(String[] args ) {
-
+    	
+    	int para =Integer.parseInt(args[0]);
         try {
         	
             System.out.println("********Welcome to  project 1!");
@@ -49,8 +50,8 @@ public class QueryEngine {
             // mode 1: english
             // mode 2: standard
             IndexProcessor indexProcessor = new IndexProcessor(1,1);
-       //     indexProcessor.mutiple_file_indexBuilder();
-
+            if(para == 0)
+            	indexProcessor.mutiple_file_indexBuilder();
             
             List<String[]> questionList= objQueryEngine.questionReader(); 
             
